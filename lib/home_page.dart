@@ -15,9 +15,26 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.deepOrangeAccent,
         title: Text(
           "PDF Reader",
-          style: textStyle(25),
+          style: textStyle(30),
         ),
         leading: const Icon(Icons.menu_outlined),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            children: [
+              Text(
+                "your Documents",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black45,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
