@@ -17,6 +17,14 @@ class _ScreenReaderState extends State<ScreenReader> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.deepOrangeAccent,
+        title: Text(
+          widget.document.title,
+          style: TextStyle(color: Colors.white, fontSize: 20),
+        ),
+      ),
       body: SfPdfViewer.network(
         widget.document.url,
       ),
